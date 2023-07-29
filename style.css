@@ -1,0 +1,354 @@
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Styling for the navbar section */
+#navbar {
+    opacity: 0;
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 1; /* Ensure the navbar is above other content */
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite, fadeIn 1.5s forwards 3s;
+}
+
+.hamburger{
+    display: none;
+}
+
+/* Styling for the navbar content */
+.navbar-content {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/* Styling for the left side of the navbar */
+.left {
+    font-size: 1.2rem;
+}
+
+/* Styling for the right side of the navbar */
+.right {
+    display: flex;
+    margin-right: 2rem;
+}
+
+/* Styling for the links in the right side of the navbar */
+.right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: transform 0.3s;
+}
+
+/* On hover, change the link color to a different color (e.g., yellow) */
+.right a:hover {
+    transform: scale(1.2); 
+}
+
+  
+/* -------------------------------------------------------------------------------------------------------------------- */
+
+/* Animation Background */
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+/* Style for the title section */
+#title {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+/* Animation keyframes for fadeInUp */
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* At the end of the animation, the opacity will be 1 */
+        transform: translateY(0); /* At the end, the section will be back to its original position */
+    }
+}
+
+/* Animation keyframes for popUp */
+@keyframes popUp {
+    0% {
+        transform: scale(0.5); /* Start the animation with 50% of the original size */
+    }
+    100% {
+        transform: scale(1); /* At the end, the section will be at its original size */
+    }
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+/* Styling for the text inside the title section */
+#title h1 {
+    font-family: 'Borel';
+    font-size: 7em; /* Change this to adjust the font size */
+    color: white; /* Change this to your desired text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    opacity: 0; /* Initially set the opacity to 0 to create the fade-in effect */
+    transform: translateY(100%); /* Move the section 100% down (hidden) */
+    animation: fadeInUp 1.5s forwards, popUp 1.5s forwards; /* Use both animations with 1.5 seconds each */
+}
+
+/* Bouncing arrow */
+
+/* Keyframes animation for the bouncing arrow */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px); /* Adjust the value as per the bouncing height you prefer */
+    }
+    60% {
+        transform: translateY(-10px); /* Adjust the value as per the bouncing height you prefer */
+    }
+}
+
+/* Styling for the arrow container */
+.arrow {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px; /* Adjust the value to control the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeIn 1.5s forwards 4s;
+}
+
+/* Apply the bouncing animation to the arrow */
+.arrow svg {
+    animation: bounce 1.5s infinite; /* Adjust the duration as per the bouncing speed you prefer */
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* At the end of the animation, the opacity will be 1 (fully visible) */
+    }
+}
+/* ---------------------------------------------------------------------------------------------------- */
+/* Styling for the about section */
+
+/* Styling for the heading */
+#about h1 {
+    font-size: 6.5rem;
+    font-family: 'Poppins';
+    text-align: center;
+    margin: 0px;
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+/* Styling for the about content */
+.about-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow the items to wrap on smaller screens */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center;
+    
+}
+
+/* Styling for the about image */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-image img{
+    padding: 20px;
+    max-width: 75%;
+    max-height: 75%;
+    object-fit: cover;
+}
+/* Styling for the bullet points */
+.about-description {
+    flex: 1; 
+    padding-left: 20px;
+    
+}
+
+.about-description ul {
+    padding: 0;
+}
+
+.about-description li {
+    padding: 10px;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------- */
+/* Work Section */
+/* Styling for the work section */
+#work {
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Styling for the heading */
+#work h1 {
+    font-size: 6.5rem;
+    font-family: 'Poppins';
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    /* -webkit-background-clip: text;
+    background-clip: text; */
+    color: white;
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+/* Carousel */
+/* Styling for the projects section */
+#projects {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Styling for each project container */
+.project-container {
+   display: flex;
+    padding: 2%; /* Add spacing between project containers */   
+    margin-bottom: 1.2rem;
+}
+
+/* Styling for project text */
+.project-text {
+    padding-right: 1.5rem;
+    flex: 1;
+    text-align: left;
+}
+
+.project-text h2{
+    margin-top: 0;
+    font-size: 3rem;
+    font-family: 'Poppins';
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+.project-text p{
+
+    font-size: 1.3rem;
+}
+
+/* Styling for project media (image or video) */
+.project-media {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for images inside the project media */
+.project-media img {
+    border-radius: 3%;
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    max-height: 20rem;
+    
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* Contact */
+footer{
+    text-align: center;
+    padding: 1%;
+    font-family: 'Poppins';
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    color: white;
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+
+}
+.social-icons i {
+    color: white;
+    font-size: 2rem; /* Adjust the font size to change icon size */
+    padding: 0.5%;
+    transition: transform 0.3s; /* Add transition for the zoom-in effect */
+}
+
+/* Zoom-in effect on hover */
+.social-icons i:hover {
+    transform: scale(1.2); /* Increase the scale on hover to zoom in */
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* media queries */
+@media (max-width: 800px){  
+    /* ----------------------------------------------------------------- */
+    /* ABOUT */
+    .about-content {
+        flex-direction: column; /* Display items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .about-image,
+    .about-description {
+        flex: none; /* Remove flex basis so they take full width individually */
+        margin: 1rem;
+    }
+    #about h1{
+        font-size: 3rem;
+    }
+    /* ----------------------------------------------------------------- */
+    /* WORK */
+    #work h1{
+        font-size: 3rem;
+        margin-top: 0;
+    }
+    .project-container{
+        flex-direction: column;
+    }
+    .project-text,
+    .project-media{
+        flex: none;
+        margin: 1rem;
+        text-align: center;
+    }
+    .project-text h2{
+        font-size: 2rem;
+    }
+    .project-text{
+        padding-right: 0;
+    }
+
+    /* hamburger */
+    .right{
+        display: none;
+    }
+
+}
